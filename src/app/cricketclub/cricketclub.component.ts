@@ -1,22 +1,22 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Player} from '../player.model';
+import { PlayerService} from '../player.service';
 
 @Component({
   selector: 'app-cricketclub',
   templateUrl: './cricketclub.component.html',
-  styleUrls: ['./cricketclub.component.css']
+  styleUrls: ['./cricketclub.component.css'],
+  providers: [PlayerService]
 })
-export class CricketclubComponent  {
+export class CricketclubComponent implements OnInit {
+  players: Player[];
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private playerService: PlayerService){}
 
-  players: Player[] = [
-    new Player("Suresh Raina",30,"http://icc-corp-2013-live.s3.amazonaws.com/players/worldt20-2016/284/14.png","Left Hand","Bowler",1),
-    new Player("MS Dhoni",35,"http://icc-corp-2013-live.s3.amazonaws.com/players/worldt20-2016/284/1.png","Right-handed","Captain", 2),
-    new Player("Virat Kohli", 30,"http://icc-corp-2013-live.s3.amazonaws.com/players/worldt20-2016/284/164.png","Left- handed","Batsman",3),
-    new Player("Yuvraj Singh",35,"http://imagespng.com/Data/DownloadLogo/Yuvraj-Singh.png","Left-handed","Couch",4),
-  ];
+  ngOnInit(){
+    this.players = this.playerService.getPlayers();
+  }
 
   goToDetailPage(clickedPlayer: Player){
     this.router.navigate(['players', clickedPlayer.id]);
