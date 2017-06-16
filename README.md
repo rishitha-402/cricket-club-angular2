@@ -1,6 +1,69 @@
 # CricketClub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+  This webpage was created to keep a log of cricket player's profile and their team information.
+
+## Planning
+
+1. Configuration/dependencies:
+  * It includes all dependencies.
+    You will need the following things properly installed on your computer.
+
+    * [Git](https://git-scm.com/)
+    * [Node.js](https://nodejs.org/) (with NPM)
+    * [Bower](https://bower.io/)
+    * [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+
+2. Specs
+| Behavior | Input | Output |
+|----------|-------|--------|
+|User visits a page to list of all club members | User navigates to club members page | A list of club members appears|
+| User can click on club member's entry to view their profile page| User clicks on club member's entry | a detail page about them opens|
+| Users can filter the lists of members by their role for the club| User can click on the "couch" | only couch details entry should list |
+| Admin can add new users to the club | Admin can input a form with name,age,hand and role | Admin can click on add button to add users to club|
+| Admin can edit new users to the club | Admin can click on edit button to edit the user's properties | Edits the properties and updates on the detail page|
+| Admin can delete a user from the club | Admin can click on delete button to delete the member | It deletes the member from the club |
+
+3. Integration
+* App component to display a list of all players(members).
+* Player component to display each player with detail information.
+* New Player component to let user fill a form and log a new player to the club.
+* Edit Player component to let user edit a property of player.
+* Player-list component displays a list of all players.
+* Player model contains the object constructor and properties which will be exported to all other components.
+* role.pipe.ts for filtering player data by role.
+
+
+Components:
+* app
+  - app.component.ts
+  - app.component.html
+  - app.component.css
+  - new-player.component.ts
+  - new-player.component.html
+  - new-player.component.css
+  - edit-player.component.ts
+  - edit-player.component.html
+  - edit-player.component.css
+  - player-list.component.ts
+  - player-list.component.css
+  - player-list.component.html
+  - admin.component.ts
+  - admin.component.css
+  - admin.component.html
+  - role.pipe.ts
+
+
+Model:
+  * player.model.ts
+
+
+4. UX/UI
+  * Included bootstrap,css.
+
+5. Polish
+  * Refactor minor portion of...
+  * Delete unused...
+  * Make README awesome.
 
 ## Development server
 
