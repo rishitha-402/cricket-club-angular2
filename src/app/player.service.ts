@@ -10,22 +10,32 @@ export class PlayerService {
     this.players = database.list('players');
   }
 
+  // get players list
   getPlayers(){
     return this.players;
   }
 
+  // add new players
   addPlayer(newPlayer: Player){
     this.players.push(newPlayer);
   }
 
+  // get players by id
   getPlayerById(playerId: string){
-  return this.database.object('players/' + playerId);
+    return this.database.object('players/' + playerId);
   }
 
+  // updating a player
   updatePlayer(localUpdatedPlayer){
     var playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
     playerEntryInFirebase.update({ name: localUpdatedPlayer.name,
-                                  age: localUpdatedPlayer.age, image: localUpdatedPlayer.image,
-                                  hand: localUpdatedPlayer.hand, role: localUpdatedPlayer.role});
+      age: localUpdatedPlayer.age, image: localUpdatedPlayer.image,
+      hand: localUpdatedPlayer.hand, role: localUpdatedPlayer.role});
+    }
+
+    // deleting a player
+    deletePlayer(localPlayerToDelete){
+      var playerEntryInFirebase = this.getPlayerById(localPlayerToDelete.$key);
+      playerEntryInFirebase.remove();
+    }
   }
-}
