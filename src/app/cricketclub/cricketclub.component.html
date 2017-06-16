@@ -1,6 +1,6 @@
 <h1>Players List</h1>
 
-<div *ngFor="let player of players"  class="player">
+<div *ngFor="let player of players"  (click)="goToDetailPage(player)" class="player">
     <div class="player-info-wrapper" >
     <img src="{{player.image}}" alt="">
     <div class="hover-info">

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { CricketclubComponent } from './cricketclub/cricketclub.component';
+import { PlayerDetailComponent } from './player-detail/player-detail.component';
 
 
 
@@ -17,6 +18,7 @@ import { CricketclubComponent } from './cricketclub/cricketclub.component';
     WelcomeComponent,
     AboutComponent,
     CricketclubComponent,
+    PlayerDetailComponent,
 
 
   ],
