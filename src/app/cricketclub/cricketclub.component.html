@@ -1,2 +1,12 @@
-<h2>Cricket Club</h2>
-<p>All our players will be listed here shortly!!</p>
+<h1>Players List</h1>
+
+<div *ngFor="let player of players"  class="player">
+    <div class="player-info-wrapper" >
+    <img src="{{player.image}}" alt="">
+    <div class="hover-info">
+      <div class="text">
+        <strong>{{player.name}}</strong><br>
+        <span>{{player.age}}</span>
+        <h3>{{player.hand}}</h3>
+      </div>
+    </div>
