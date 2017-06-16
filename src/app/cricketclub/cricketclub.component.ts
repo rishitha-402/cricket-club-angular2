@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Player} from '../player.model';
 import { PlayerService} from '../player.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-cricketclub',
@@ -9,8 +10,9 @@ import { PlayerService} from '../player.service';
   styleUrls: ['./cricketclub.component.css'],
   providers: [PlayerService]
 })
+
 export class CricketclubComponent implements OnInit {
-  players: Player[];
+  players: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private playerService: PlayerService){}
 
