@@ -6,6 +6,7 @@ import { CricketclubComponent} from'./cricketclub/cricketclub.component';
 import { PlayerDetailComponent} from './player-detail/player-detail.component';
 import { AdminComponent } from './admin/admin.component';
 
+
 const appRoutes: Routes = [
   {
     path: '',
