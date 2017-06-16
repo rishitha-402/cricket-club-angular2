@@ -1,5 +1,5 @@
 <div>
-  <h3>{{playerToDisplay.name}}</h3>
-  <h4>{{playerToDisplay.age}}</h4>
-  <p>{{playerToDisplay.hand}}</p>
+  <h3>{{(playerToDisplay| async)?.name}}</h3>
+  <h4>{{(playerToDisplay| async)?.age}}</h4>
+  <p>{{(playerToDisplay| async)?.hand}}</p>
 </div>

@@ -13,6 +13,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { CricketclubComponent } from './cricketclub/cricketclub.component';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,6 +29,7 @@ export const firebaseConfig = {
     AboutComponent,
     CricketclubComponent,
     PlayerDetailComponent,
+    AdminComponent,
 
 
   ],
