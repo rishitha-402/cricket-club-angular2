@@ -21,4 +21,11 @@ export class PlayerService {
   getPlayerById(playerId: string){
   return this.database.object('players/' + playerId);
   }
+
+  updatePlayer(localUpdatedPlayer){
+    var playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
+    playerEntryInFirebase.update({ name: localUpdatedPlayer.name,
+                                  age: localUpdatedPlayer.age, image: localUpdatedPlayer.image,
+                                  hand: localUpdatedPlayer.hand, role: localUpdatedPlayer.role});
+  }
 }

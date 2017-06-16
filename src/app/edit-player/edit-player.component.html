@@ -1,3 +1,20 @@
-<p>
-  edit-player works!
-</p>
+<!-- editing a player -->
+
+<h4>Edit Player</h4>
+
+<label>New Player Name:</label>
+<input [(ngModel)]="selectedPlayer.name">
+<br>
+
+<label>New Player age:</label>
+<input [(ngModel)]="selectedPlayer.age">
+<br>
+
+<label>New Player image:</label>
+<input [(ngModel)]="selectedPlayer.image">
+<br>
+
+<label>New Player role:</label>
+<input [(ngModel)]="selectedPlayer.role">
+
+<button (click)="beginUpdatingPlayer(selectedPlayer)">Update</button>

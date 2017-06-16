@@ -1,8 +1,9 @@
 <h1>Players List</h1>
 
-<div *ngFor="let player of players | async"  (click)="goToDetailPage(player)" class="player">
+<div *ngFor="let player of players | async" class="player">
+  <h3 (click)="goToDetailPage(player)"><em>{{player.name}}</em></h3>
     <div class="player-info-wrapper" >
-    <img src="{{player.image}}" alt="">
+    <img src="{{player.image}}" alt="player-images">
     <div class="hover-info">
       <div class="text">
         <strong>{{player.name}}</strong><br>
@@ -14,5 +15,5 @@
   </div>
     <div *ngIf="currentRoute === '/admin'">
       <hr>
-      <app-edit-player></app-edit-player>
+      <app-edit-player [selectedPlayer]="player"></app-edit-player>
     </div>
