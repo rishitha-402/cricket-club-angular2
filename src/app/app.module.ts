@@ -6,7 +6,8 @@ import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthService } from './auth.service';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -16,6 +17,9 @@ import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { RolePipe } from './role.pipe';
+import { AuthComponent } from './auth/auth.component';
+
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +37,8 @@ export const firebaseConfig = {
     PlayerDetailComponent,
     AdminComponent,
     EditPlayerComponent,
-    RolePipe
+    RolePipe,
+    AuthComponent
   ],
 
   imports: [
@@ -42,9 +47,10 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

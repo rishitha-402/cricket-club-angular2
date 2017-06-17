@@ -20,7 +20,7 @@
 
 <h1>Players List</h1>
 
-<div *ngFor="let player of players | async | role:filterByRole" class="player">
+<div class="flex-container" *ngFor="let player of players | async | role:filterByRole" class="player">
 
     <div class="player-info-wrapper" >
     <img src="{{player.image}}" alt="player-images">
