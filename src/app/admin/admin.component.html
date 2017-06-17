@@ -33,7 +33,13 @@
         <br>
         <input #newRole>
       </div>
-      <button (click)="submitForm(newName.value, newAge.value, newImage.value, newHand.value, newRole.value); newName.value=''; newAge.value=''; newImage.value=''; newHand.value=''; newRole.value=''">Add</button>
+
+      <div>
+        <label>Player team:</label>
+        <br>
+        <input #newTeam>
+      </div>
+      <button (click)="submitForm(newName.value, newAge.value, newImage.value, newHand.value, newRole.value, newTeam.value); newName.value=''; newAge.value=''; newImage.value=''; newHand.value=''; newRole.value=''; newTeam.value=''">Add</button>
     </div>
   </div>
 </div>

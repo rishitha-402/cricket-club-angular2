@@ -1,0 +1,37 @@
+.teamlogo{
+  width: 100px;
+}
+
+.profilepic{
+
+}
+
+.well{
+  height: 350px;
+}
+
+.flex-grid{
+  display: flex;
+  -webkit-box-aligh: stretch;
+  align-items: stretch;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-direction: row;
+}
+
+.player-details-label{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.col-md-6 {
+  color: white;
+  background: #274690;
+  padding: 20px;
+}
+
+.col-md-3 {
+  border: 1px solid #274690;
+}

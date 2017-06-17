@@ -30,7 +30,7 @@ export class PlayerService {
     var playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
     playerEntryInFirebase.update({ name: localUpdatedPlayer.name,
       age: localUpdatedPlayer.age, image: localUpdatedPlayer.image,
-      hand: localUpdatedPlayer.hand, role: localUpdatedPlayer.role});
+      hand: localUpdatedPlayer.hand, role: localUpdatedPlayer.role, team: localUpdatedPlayer.team});
     }
 
     // deleting a player

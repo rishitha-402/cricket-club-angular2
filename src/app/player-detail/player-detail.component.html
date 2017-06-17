@@ -1,6 +1,31 @@
-<div>
-  <h3>{{(playerToDisplay| async)?.name}}</h3>
-  <h4>{{(playerToDisplay| async)?.age}}</h4>
-  <p>{{(playerToDisplay| async)?.hand}}</p>
-   <h4>{{(playerToDisplay| async)?.role}}</h4>
+
+<div class="flex-grid">
+    <div class="col-md-3" >
+      <img class="profilepic" src="{{(playerToDisplay | async)?.image}}" alt="">
+    </div>
+    <div class="col-md-6">
+      <table class="player-details">
+          <tbody>
+              <tr>
+                <td class="player-details-label">Name</td>
+                <td class="player-details-value">{{(playerToDisplay| async)?.name}}</td>
+              </tr>
+              <tr>
+                <td class="player-details-label">Age</td>
+                <td class="player-details-value">{{(playerToDisplay| async)?.age}}</td>
+              </tr>
+              <tr class="role">
+              <td class="player-details-label">Role</td>
+              <td class="player-details-value">{{(playerToDisplay | async)?.role}}</td>
+              </tr>
+              <tr>
+              <td class="player-details-label">Hand</td>
+              <td class="player-details-value">{{(playerToDisplay| async)?.hand}}</td>
+              </tr>
+              <tr>
+                <td class="player-details-value"><img class="teamlogo" src="{{(playerToDisplay| async)?.team}}" alt=""></td>
+              </tr>
+          </tbody>
+      </table>
+</div>
 </div>

@@ -17,6 +17,9 @@
 <label>New Player role:</label>
 <input [(ngModel)]="selectedPlayer.role">
 
+<label>New Player team:</label>
+<input [(ngModel)]="selectedPlayer.team">
+
 <button (click)="beginUpdatingPlayer(selectedPlayer)">Update</button>
 <hr>
 <button (click)="beginDeletingPlayer(selectedPlayer)">Delete</button>
