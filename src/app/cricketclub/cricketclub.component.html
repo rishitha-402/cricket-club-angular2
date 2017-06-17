@@ -1,15 +1,24 @@
+<div class="row">
+  <div class="col-md-3">
+    <p>Filter by role:</p>
+    <select class="form-control" (change)="onChange($event.target.value)">
+      <option value="Captain">Captain</option>
+      <option value="Bowler">Bowler</option>
+      <option value="Batsman">Batsman</option>
+      <option value="Fielder">Fielder</option>
+      <option value="Wicket-keeper">Wicket Keeper</option>
+      <option value="Umpire">Umpire</option>
+      <option value="Coach">Coach</option>
+      <option value="allRoles" selected="selected">All Roles</option>
+    </select>
+  </div>
+</div>
+
+
+
+
+
 <h1>Players List</h1>
-<p>Filter by role:</p>
-<select class="form-control" (change)="onChange($event.target.value)">
-  <option value="Captain">Captain</option>
-  <option value="Bowler">Bowler</option>
-  <option value="Batsman">Batsman</option>
-  <option value="Fielder">Fielder</option>
-  <option value="Wicket-keeper">Wicket Keeper</option>
-  <option value="Umpire">Umpire</option>
-  <option value="Coach">Coach</option>
-  <option value="allRoles" selected="selected">All Roles</option>
-</select>
 
 <div *ngFor="let player of players | async | role:filterByRole" class="player">
 

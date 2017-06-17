@@ -1,6 +1,6 @@
 <!-- editing a player -->
-<h4>Edit Player</h4>
-<div>
+<button type="btn btn-info" (click)="showEditPlayerForm = !showEditPlayerForm">{{ showEditPlayerForm ? "Hide Form" : "Edit Player" }}</button>
+  <div *ngIf="showEditPlayerForm">
   <label>New Player Name:</label>
   <input [(ngModel)]="selectedPlayer.name">
   <br>
