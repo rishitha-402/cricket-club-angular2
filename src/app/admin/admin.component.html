@@ -1,9 +1,11 @@
-<div class="panel panel-default">
+<a (click)="showAddPlayerForm = !showAddPlayerForm">{{ showAddPlayerForm ? "Hide Form" : "Add Player to Club" }}</a>
+<br>
+<div *ngIf="showAddPlayerForm" class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Add New Player to Club!</h3>
   </div>
   <div class="panel-body">
-    <div>
+    <form>
       <div>
         <label>Player Name:</label>
         <br>
@@ -40,7 +42,7 @@
         <input #newTeam>
       </div>
       <button (click)="submitForm(newName.value, newAge.value, newImage.value, newHand.value, newRole.value, newTeam.value); newName.value=''; newAge.value=''; newImage.value=''; newHand.value=''; newRole.value=''; newTeam.value=''">Add</button>
-    </div>
+    </form>
   </div>
 </div>
 

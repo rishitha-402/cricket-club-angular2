@@ -1,25 +1,26 @@
 <!-- editing a player -->
-
 <h4>Edit Player</h4>
+<div>
+  <label>New Player Name:</label>
+  <input [(ngModel)]="selectedPlayer.name">
+  <br>
 
-<label>New Player Name:</label>
-<input [(ngModel)]="selectedPlayer.name">
-<br>
+  <label>New Player age:</label>
+  <input [(ngModel)]="selectedPlayer.age">
+  <br>
 
-<label>New Player age:</label>
-<input [(ngModel)]="selectedPlayer.age">
-<br>
+  <label>New Player image:</label>
+  <input [(ngModel)]="selectedPlayer.image">
+  <br>
 
-<label>New Player image:</label>
-<input [(ngModel)]="selectedPlayer.image">
-<br>
+  <label>New Player role:</label>
+  <input [(ngModel)]="selectedPlayer.role">
 
-<label>New Player role:</label>
-<input [(ngModel)]="selectedPlayer.role">
+  <label>New Player team:</label>
+  <input [(ngModel)]="selectedPlayer.team">
 
-<label>New Player team:</label>
-<input [(ngModel)]="selectedPlayer.team">
+  <button (click)="beginUpdatingPlayer(selectedPlayer)">Update</button>
+  <hr>
+  <button (click)="beginDeletingPlayer(selectedPlayer)">Delete</button>
 
-<button (click)="beginUpdatingPlayer(selectedPlayer)">Update</button>
-<hr>
-<button (click)="beginDeletingPlayer(selectedPlayer)">Delete</button>
+</div>

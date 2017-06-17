@@ -1,6 +1,7 @@
 h3 {
   text-align: center;
 }
+
 .player {
   position: relative;
   width: 20%;
@@ -30,7 +31,7 @@ h3 {
 }
 .hover-info .text {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

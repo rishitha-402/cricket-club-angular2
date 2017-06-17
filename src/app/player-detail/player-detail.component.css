@@ -1,5 +1,5 @@
 .teamlogo{
-  width: 100px;
+  width: 150px;
 }
 
 .profilepic{
@@ -21,17 +21,28 @@
   -webkit-flex-direction: row;
 }
 
-.player-details-label{
-  font-size: 15px;
-  font-weight: bold;
+.player-details-label {
+    opacity: .7;
 }
 
-.col-md-6 {
+.col-md-7 {
   color: white;
+  font-size: 20px;
   background: #274690;
   padding: 20px;
 }
 
 .col-md-3 {
   border: 1px solid #274690;
+}
+
+.player-details-value{
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+    padding: 0;
 }
