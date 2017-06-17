@@ -1,6 +1,16 @@
 <h1>Players List</h1>
-
-<div *ngFor="let player of players | async" class="player">
+<p>Filter by role:</p>
+<select class="form-control" (change)="onChange($event.target.value)">
+  <option value="captain">Captain</option>
+  <option value="bowler">Bowler</option>
+  <option value="batsman">Batsman</option>
+  <option value="fielder">Fielder</option>
+  <option value="wicket-keeper">Wicket Keeper</option>
+  <option value="umpire">Umpire</option>
+  <option value="coach" selected>Coach</option>
+</select>
+<br>
+<div *ngFor="let player of players | async | role:filterBy"class="player">
   <h3 (click)="goToDetailPage(player)"><em>{{player.name}}</em></h3>
     <div class="player-info-wrapper" >
     <img src="{{player.image}}" alt="player-images">
@@ -9,6 +19,7 @@
         <strong>{{player.name}}</strong><br>
         <span>{{player.age}}</span>
         <h3>{{player.hand}}</h3>
+        <h4>{{player.role}}</h4>
       </div>
     </div>
 

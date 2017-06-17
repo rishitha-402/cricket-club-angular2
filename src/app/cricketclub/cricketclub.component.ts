@@ -25,4 +25,10 @@ export class CricketclubComponent implements OnInit {
   goToDetailPage(clickedPlayer){
     this.router.navigate(['players', clickedPlayer.$key]);
   };
+
+  filterBy: string = "coach"
+
+  onChange(menuOption){
+    this.filterBy = menuOption;
+  }
 }
