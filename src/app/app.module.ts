@@ -33,10 +33,9 @@ export const firebaseConfig = {
     PlayerDetailComponent,
     AdminComponent,
     EditPlayerComponent,
-    RolePipe,
-
-
+    RolePipe
   ],
+
   imports: [
     BrowserModule,
     FormsModule,

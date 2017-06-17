@@ -7,42 +7,18 @@ import { Player } from './player.model';
 })
 
 export class RolePipe implements PipeTransform {
-
-  transform(input: Player[], condition) {
+  transform(input: Player[], condition: string) {
    var output: Player[] = [];
-   if (input != null){
-     switch(condition){
-       case "captain":
-         return input.filter(function(player){
-           return player.role === "captain";
-         });
-       case "bowler":
-         return input.filter(function(player){
-           return player.role === "bowler";
-         });
-       case "batsman":
-         return input.filter(function(player){
-           return player.role === "batsman";
-         });
-       case "fielder":
-         return input.filter(function(player){
-           return player.role === "fielder";
-         });
-        case "wicket-keeper":
-           return input.filter(function(player){
-             return player.role === "wicket-keeper";
-           });
-        case "umpire":
-             return input.filter(function(player){
-               return player.role === "umpire";
-             });
-        case "coach":
-             return input.filter(function(player){
-               return player.role === "coach";
-             });
-       default:
-         return input;
-     }
+   if (condition === "allRoles") {
+     return input;
    }
- }
+   else {
+     for (var i = 0; i < input.length; i++) {
+       if (input[i].role === condition) {
+         output.push(input[i]);
+       }
+     }
+     return output;
+   }
+  }
 }

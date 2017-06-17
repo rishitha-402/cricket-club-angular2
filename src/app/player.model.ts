@@ -6,6 +6,6 @@ export class Player {
     public age: number,
     public image: string,
     public hand: string,
-    public role: string
+    public role: string,
   ) {}
 }

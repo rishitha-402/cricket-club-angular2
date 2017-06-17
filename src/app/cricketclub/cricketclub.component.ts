@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Player} from '../player.model';
 import { PlayerService} from '../player.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+// import { RolePipe} from '../role.pipe';
 
 @Component({
   selector: 'app-cricketclub',
@@ -14,6 +15,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class CricketclubComponent implements OnInit {
   players: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByRole: string = 'allRoles';
 
   constructor(private router: Router, private playerService: PlayerService){}
 
@@ -26,9 +28,7 @@ export class CricketclubComponent implements OnInit {
     this.router.navigate(['players', clickedPlayer.$key]);
   };
 
-  filterBy: string = "coach"
-
   onChange(menuOption){
-    this.filterBy = menuOption;
+    this.filterByRole = menuOption;
   }
 }

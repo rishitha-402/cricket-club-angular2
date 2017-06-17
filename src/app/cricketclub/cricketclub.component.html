@@ -1,17 +1,18 @@
 <h1>Players List</h1>
 <p>Filter by role:</p>
 <select class="form-control" (change)="onChange($event.target.value)">
-  <option value="captain">Captain</option>
-  <option value="bowler">Bowler</option>
-  <option value="batsman">Batsman</option>
-  <option value="fielder">Fielder</option>
-  <option value="wicket-keeper">Wicket Keeper</option>
-  <option value="umpire">Umpire</option>
-  <option value="coach" selected>Coach</option>
+  <option value="Captain">Captain</option>
+  <option value="Bowler">Bowler</option>
+  <option value="Batsman">Batsman</option>
+  <option value="Fielder">Fielder</option>
+  <option value="Wicket-keeper">Wicket Keeper</option>
+  <option value="Umpire">Umpire</option>
+  <option value="Coach">Coach</option>
+  <option value="allRoles" selected="selected">All Roles</option>
 </select>
-<br>
-<div *ngFor="let player of players | async | role:filterBy"class="player">
-  <h3 (click)="goToDetailPage(player)"><em>{{player.name}}</em></h3>
+
+<div *ngFor="let player of players | async | role:filterByRole" class="player">
+
     <div class="player-info-wrapper" >
     <img src="{{player.image}}" alt="player-images">
     <div class="hover-info">
@@ -22,9 +23,11 @@
         <h4>{{player.role}}</h4>
       </div>
     </div>
-
   </div>
+  <h3 (click)="goToDetailPage(player)"><em>{{player.name}}</em></h3>
+
     <div *ngIf="currentRoute === '/admin'">
       <hr>
       <app-edit-player [selectedPlayer]="player"></app-edit-player>
     </div>
+</div>
