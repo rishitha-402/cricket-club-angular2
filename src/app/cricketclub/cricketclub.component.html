@@ -17,7 +17,6 @@
 
 
 <h1>Players List</h1>
-<p>Click on player name for more details...!!</p>
 
 <div class="flex-container" *ngFor="let player of players | async | team:filterByTeam | role:filterByRole" class="player">
 
@@ -30,8 +29,7 @@
       </div>
     </div>
   </div>
-  <h3 (click)="goToDetailPage(player)"><em>{{player.name}}</em></h3>
-
+  <h3 (click)="goToDetailPage(player)"><em>View profile</em></h3>
     <div *ngIf="currentRoute === '/admin'">
       <hr>
       <app-edit-player [selectedPlayer]="player"></app-edit-player>
