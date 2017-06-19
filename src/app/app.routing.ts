@@ -14,6 +14,22 @@ const appRoutes: Routes = [
     component: WelcomeComponent
   },
   {
+    path: 'chennai',
+    component: CricketclubComponent
+  },
+  {
+    path: 'hyderabad',
+    component: CricketclubComponent
+  },
+  {
+    path: 'mumbai',
+    component: CricketclubComponent
+  },
+  {
+    path: 'bangalore',
+    component: CricketclubComponent
+  },
+  {
     path: 'about',
     component: AboutComponent
   },

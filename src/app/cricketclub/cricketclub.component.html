@@ -16,18 +16,17 @@
 
 
 
-
-
 <h1>Players List</h1>
+<p>Click on player name for more details...!!</p>
 
-<div class="flex-container" *ngFor="let player of players | async | role:filterByRole" class="player">
+<div class="flex-container" *ngFor="let player of players | async | team:filterByTeam | role:filterByRole" class="player">
 
     <div class="player-info-wrapper" >
     <img src="{{player.image}}" alt="player-images">
     <div class="hover-info">
       <div class="text">
         <strong>{{player.name}}</strong><br>
-        <img src="{{player.team}}" alt="team-image">
+        <h2>{{player.team}}</h2>
       </div>
     </div>
   </div>

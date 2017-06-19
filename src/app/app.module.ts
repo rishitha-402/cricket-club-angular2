@@ -17,7 +17,7 @@ import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { RolePipe } from './role.pipe';
-import { AuthComponent } from './auth/auth.component';
+import { TeamPipe } from './team.pipe';
 
 
 
@@ -38,7 +38,7 @@ export const firebaseConfig = {
     AdminComponent,
     EditPlayerComponent,
     RolePipe,
-    AuthComponent
+    TeamPipe
   ],
 
   imports: [

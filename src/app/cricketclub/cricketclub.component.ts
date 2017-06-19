@@ -16,12 +16,25 @@ export class CricketclubComponent implements OnInit {
   players: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
   filterByRole: string = 'allRoles';
+  filterByTeam: string = "allTeams"
 
   constructor(private router: Router, private playerService: PlayerService){}
 
   ngOnInit(){
     this.players = this.playerService.getPlayers();
-    console.log(this.router.url);
+    //console.log(this.router.url);
+
+    if(this.currentRoute === "/chennai"){
+      this.filterByTeam = "chennai";
+    } else if (this.currentRoute === "/hyderabad") {
+      this.filterByTeam = "hyderabad";
+    } else if (this.currentRoute === "/mumbai") {
+      this.filterByTeam = "mumbai";
+    } else if (this.currentRoute === "/bangalore") {
+      this.filterByTeam = "bangalore";
+    } else {
+      this.filterByTeam = "allTeams";
+    }
   }
 
   goToDetailPage(clickedPlayer){

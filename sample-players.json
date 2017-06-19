@@ -4,20 +4,20 @@
     "image":"http://icc-corp-2013-live.s3.amazonaws.com/players/worldt20-2016/284/1.png",
     "hand":"Left-handed",
     "role":"Captain",
-    "id": "1"
+    "team":"chennai"
     }, {
     "name": "Suresh Raina",
     "age": 30,
     "image": "http://icc-corp-2013-live.s3.amazonaws.com/players/worldt20-2016/284/14.png",
     "hand": "Right-handed.",
     "role":"Batsman",
-    "id": "2"
+    "team": "hyderabad"
       }, {
     "name": "Yuvraj Singh",
     "age": 34,
     "image":"http://imagespng.com/Data/DownloadLogo/Yuvraj-Singh.png",
     "hand": "Left-handed.",
     "role": "bowler",
-    "id": "3"
+    "team": "bangalore"
   }]
 }
