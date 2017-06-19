@@ -14,14 +14,17 @@
     * [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
 2. Specs
+
 | Behavior | Input | Output |
 |----------|-------|--------|
 |User visits a page to list of all club members | User navigates to club members page | A list of club members appears|
 | User can click on club member's entry to view their profile page| User clicks on club member's entry | a detail page about them opens|
 | Users can filter the lists of members by their role for the club| User can click on the "couch" | only couch details entry should list |
+| Users can click on team logo to filter players by their team and filter player by their role in that specific team | click on team logo | a list of players in that team are routed to a new page |
 | Admin can add new users to the club | Admin can input a form with name,age,hand and role | Admin can click on add button to add users to club|
 | Admin can edit new users to the club | Admin can click on edit button to edit the user's properties | Edits the properties and updates on the detail page|
 | Admin can delete a user from the club | Admin can click on delete button to delete the member | It deletes the member from the club |
+
 
 3. Integration
 * App component to display a list of all players(members).
@@ -51,11 +54,16 @@ Components:
   - admin.component.css
   - admin.component.html
   - role.pipe.ts
+  - team.pipe.ts
 
 
 Model:
   * player.model.ts
 
+
+Services:
+- player.service.ts
+- auth.service.ts (for user authentication)
 
 4. UX/UI
   * Included bootstrap,css.
