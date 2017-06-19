@@ -3,9 +3,9 @@
   This webpage was created to keep a log of cricket player's profile and their team information.
 
 ## LandingPage
-[]!(https://github.com/sowmyadsl/cricket-club/blob/master/src/assets/images/Screen%20Shot%202017-06-19%20at%2012.01.24%20AM.png)
-[]!(https://github.com/sowmyadsl/cricket-club/blob/master/src/assets/images/Screen%20Shot%202017-06-19%20at%2012.02.03%20AM.png)
-[]!(https://github.com/sowmyadsl/cricket-club/blob/master/src/assets/images/Screen%20Shot%202017-06-19%20at%2012.18.17%20AM.png)
+![](https://github.com/sowmyadsl/cricket-club/blob/master/src/assets/images/Screen%20Shot%202017-06-19%20at%2012.01.24%20AM.png)
+![](https://github.com/sowmyadsl/cricket-club/blob/master/src/assets/images/Screen%20Shot%202017-06-19%20at%2012.02.03%20AM.png)
+![](https://github.com/sowmyadsl/cricket-club/blob/master/src/assets/images/Screen%20Shot%202017-06-19%20at%2012.18.17%20AM.png)
 
 ## Planning
 
