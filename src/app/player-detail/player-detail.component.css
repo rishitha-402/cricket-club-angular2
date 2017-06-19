@@ -11,6 +11,7 @@
 }
 
 .flex-grid{
+  margin-top: 70px;
   display: flex;
   -webkit-box-aligh: stretch;
   align-items: stretch;

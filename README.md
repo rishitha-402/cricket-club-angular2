@@ -17,13 +17,14 @@
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-|User visits a page to list of all club members | User navigates to club members page | A list of club members appears|
-| User can click on club member's entry to view their profile page| User clicks on club member's entry | a detail page about them opens|
-| Users can filter the lists of members by their role for the club| User can click on the "couch" | only couch details entry should list |
+|User visits a CricketClub to list of all players | User navigates to club page | A list of players appears|
+| User can click on club player's profile | User clicks on club player's profile | a detail page about the player opens|
+| Users can filter the lists of players by their role for the team| User can click on the "batsman" | only players who are under the role of 'batman' appears|
 | Users can click on team logo to filter players by their team and filter player by their role in that specific team | click on team logo | a list of players in that team are routed to a new page |
-| Admin can add new users to the club | Admin can input a form with name,age,hand and role | Admin can click on add button to add users to club|
+| Admin can add new users to the club | Admin can input a form with name, age, hand , team and role | Admin can click on add button to add users to club|
 | Admin can edit new users to the club | Admin can click on edit button to edit the user's properties | Edits the properties and updates on the detail page|
 | Admin can delete a user from the club | Admin can click on delete button to delete the member | It deletes the member from the club |
+| User can create an account and sign up | User signs up with email and password  | User logins in |
 
 
 3. Integration
